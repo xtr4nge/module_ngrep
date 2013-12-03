@@ -98,7 +98,11 @@ if ($install == "install_ngrep") {
     exit;
 }
 
-//header('Location: ../index.php?tab=0');
-header('Location: ../../action.php?page=ngrep');
+if ($page == "status") {
+    header('Location: ../../../action.php');
+} else {
+    header('Location: ../../action.php?page=ngrep');
+}
+//header('Location: ../../action.php?page=ngrep');
 
 ?>
