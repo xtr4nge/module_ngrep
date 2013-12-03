@@ -4,6 +4,9 @@ $mod_version="1.1";
 $mod_logs="/usr/share/FruityWifi/logs/ngrep.log"; 
 $mod_logs_history="/usr/share/FruityWifi/www/modules/ngrep/includes/logs/";
 $mod_path="/usr/share/FruityWifi/www/modules/ngrep";
+$mod_panel="show";
+$mod_isup="ps auxww | grep ngrep | grep -v -e 'grep ngrep'";
+$mod_alias="ngrep";
 # EXEC
 $bin_danger = "/usr/share/FruityWifi/bin/danger";
 $bin_sudo = "/usr/bin/sudo";
