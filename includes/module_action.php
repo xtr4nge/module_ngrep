@@ -65,7 +65,7 @@ if($service != "") {
         $filename = "$mod_path/includes/templates/".$ss_mode;
         $data = open_file($filename);
         
-        $exec = "$bin_grep -q -d wlan0 -W byline $options -t $data >> $mod_logs &";        
+        $exec = "$bin_grep -q -d $iface_wifi -W byline $options -t $data >> $mod_logs &";        
         exec("$bin_danger \"$exec\"" );
         
     } else if($action == "stop") {
