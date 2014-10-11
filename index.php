@@ -1,6 +1,6 @@
 <? 
 /*
-	Copyright (C) 2013  xtr4nge [_AT_] gmail.com
+	Copyright (C) 2013-2014  xtr4nge [_AT_] gmail.com
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -46,6 +46,7 @@ $(function() {
 
 include "_info_.php";
 include "../../config/config.php";
+include "../../login_check.php";
 include "../../functions.php";
 
 // Checking POST & GET variables...
@@ -145,6 +146,7 @@ Loading, please wait...
             <li><a href="#result-2">Options</a></li>
             <li><a href="#result-3">Lists</a></li>
             <li><a href="#result-4">History</a></li>
+			<li><a href="#result-5">About</a></li>
         </ul>
         <div id="result-1">
             <form id="formLogs-Refresh" name="formLogs-Refresh" method="POST" autocomplete="off" action="index.php">
@@ -177,7 +179,7 @@ Loading, please wait...
             <input type="submit" value="save">
             <br><br>
             
-            <div class="module" style="background-color:#000; border:1px dashed;">
+            <div class="module-content" style="b-ackground-color:#000; b-order:1px dashed;">
             <table>
                 <!-- // OPTION i --> 
                 <tr>
@@ -244,7 +246,7 @@ Loading, please wait...
             
         <table border=0 cellspacing=0 cellpadding=0>
             <tr>
-            <td>
+            <td class="general">
                 Template
             </td>
             <td>
@@ -269,7 +271,7 @@ Loading, please wait...
             </form>
             </td>
             <tr>
-            <td style="padding-right:10px">
+            <td class="general" style="padding-right:10px">
                 Add/Rename
             </td>
             <td>
@@ -340,7 +342,9 @@ Loading, please wait...
 
         <!-- END LISTS -->
 
-        <div id="result-4">
+		<!-- HISTORY -->
+
+        <div id="result-4" class="history">
             <input type="submit" value="refresh">
             <br><br>
             
@@ -358,6 +362,16 @@ Loading, please wait...
             ?>
             
         </div>
+		
+		<!-- END HISTORY -->
+		
+		<!-- ABOUT -->
+
+        <div id="result-5" class="history">
+			<? include "includes/about.php"; ?>
+		</div>
+		
+		<!-- END ABOUT -->
         
     </div>
 

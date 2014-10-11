@@ -29,7 +29,7 @@ if ($regex == 1) {
     regex_standard($_GET["service"], "../msg.php", $regex_extra);
     regex_standard($_GET["action"], "../msg.php", $regex_extra);
     regex_standard($_GET["page"], "../msg.php", $regex_extra);
-    regex_standard($iface_wifi, "../msg.php", $regex_extra);
+    regex_standard($io_action, "../msg.php", $regex_extra);
     regex_standard($_GET["install"], "../msg.php", $regex_extra);
 }
 
@@ -65,7 +65,7 @@ if($service != "") {
         $filename = "$mod_path/includes/templates/".$ss_mode;
         $data = open_file($filename);
         
-        $exec = "$bin_grep -q -d $iface_wifi -W byline $options -t $data >> $mod_logs &";        
+        $exec = "$bin_grep -q -d $io_action -W byline $options -t $data >> $mod_logs &";        
         exec("$bin_danger \"$exec\"" );
         
     } else if($action == "stop") {
