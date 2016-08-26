@@ -1,7 +1,12 @@
 module_ngrep
 ===========
 
-FruityWifi ngrep module
+FruityWiFi ngrep module
+
+
+v1.5
+---------------------------------
+- PHP7 compatibility issues has been fixed
 
 
 v1.0
